@@ -1,0 +1,30 @@
+package com.spring5.ch2.decoupled;
+
+import java.io.IOException;
+import java.util.Properties;
+
+public class MessageSupportFactory {
+
+	private Properties props;
+
+	MessageRenderer messageRenderer;
+
+	MessageProvider messageProvider;
+
+	@SuppressWarnings("deprecation")
+	private MessageSupportFactory()
+			throws IOException, InstantiationException, IllegalAccessException, ClassNotFoundException {
+		super();
+
+		props = new Properties();
+
+		props.load(this.getClass().getResourceAsStream("/msf.properties"));
+
+		messageRenderer = (MessageRenderer) Class.forName(props.getProperty("renderer.class")).newInstance();
+		messageProvider = (MessageProvider) Class.forName(props.getProperty("provider.class")).newInstance();
+
+	}
+	
+	
+
+}

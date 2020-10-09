@@ -1,0 +1,14 @@
+package com.spring5.ch2.annotated;
+
+import org.springframework.context.annotation.Configuration;
+
+import com.spring5.ch2.decoupled.MessageProvider;
+
+@Configuration
+public class HellowWorldConfiguration {
+	
+	public MessageProvider getMessageProvider() {
+		return new 
+	}
+
+}

@@ -1,0 +1,24 @@
+package com.spring5.ch2;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.spring5.ch2.annotated.HellowWorldConfiguration;
+import com.spring5.ch2.decoupled.MessageProvider;
+import com.spring5.ch2.decoupled.MessageRenderer;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(HellowWorldConfiguration.class) ;
+
+		MessageRenderer mr = applicationContext.getBean("getMessageRenderer", MessageRenderer.class);
+		MessageProvider mp = applicationContext.getBean("getMessageProvider", MessageProvider.class);
+		
+		mr.setMessageProvider(mp);
+		mr.render();
+
+	}
+
+}

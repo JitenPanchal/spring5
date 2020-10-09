@@ -1,0 +1,19 @@
+package com.spring5.ch2.decoupled;
+
+public class StandardOutMessageRenderer implements MessageRenderer {
+
+	public void render() {
+		
+		
+	}
+
+	public void setMessageProvider(MessageProvider messageProvider) {
+		this.messageProvider = messageProvider;
+	}
+
+	public MessageProvider getMessageProvider() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

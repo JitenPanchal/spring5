@@ -1,0 +1,18 @@
+package com.spring5.ch2.decoupled;
+
+import java.util.Properties;
+
+public class MessageSupportFactory {
+	
+	private Properties props;
+
+	public MessageSupportFactory(Properties props) {
+		super();
+		this.props = props;
+		
+		props.load(this.getClass().getResourceAsStream("/msf.properties"));
+	}
+	
+	
+
+}

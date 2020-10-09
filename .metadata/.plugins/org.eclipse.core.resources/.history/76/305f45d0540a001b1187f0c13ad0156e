@@ -1,0 +1,8 @@
+package com.spring5.ch2.annotated;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class HellowWorldConfiguration {
+
+}

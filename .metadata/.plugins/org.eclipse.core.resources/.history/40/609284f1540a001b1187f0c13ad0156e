@@ -1,0 +1,23 @@
+package com.spring5.ch2.annotated;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.spring5.ch2.decoupled.HelloWorldMessageProvider;
+import com.spring5.ch2.decoupled.MessageProvider;
+import com.spring5.ch2.decoupled.MessageRenderer;
+import com.spring5.ch2.decoupled.StandardOutMessageRenderer;
+
+@Configuration
+public class HellowWorldConfiguration {
+	
+	@Bean
+	public MessageProvider getMessageProvider() {
+		return new HelloWorldMessageProvider();
+	}
+	
+	public MessageRenderer getMessageRenderer() {
+		return new StandardOutMessageRenderer();
+	}
+
+}

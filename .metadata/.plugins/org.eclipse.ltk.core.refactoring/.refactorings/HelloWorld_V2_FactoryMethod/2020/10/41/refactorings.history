@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;HelloWorldMessageProvider.java&apos; to &apos;HelloWorld_Spring/src/main/java/com.spring5.ch2.decoupled&apos;&#x0D;&#x0A;- Original project: &apos;HelloWorld_V2_FactoryMethod&apos;&#x0D;&#x0A;- Destination element: &apos;HelloWorld_Spring/src/main/java/com.spring5.ch2.decoupled&apos;&#x0D;&#x0A;- Original element: &apos;com.spring5.ch2.decoupled.HelloWorldMessageProvider.java&apos;" description="Copy compilation unit" destination="=HelloWorld_Spring/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring5.ch2.decoupled" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring5.ch2.decoupled{HelloWorldMessageProvider.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1602264495466" units="1" version="1.0"/>
+</session>

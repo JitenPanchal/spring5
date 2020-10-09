@@ -1,0 +1,22 @@
+package com.spring5.ch2;
+
+import java.io.IOException;
+
+import com.spring5.ch2.decoupled.MessageProvider;
+import com.spring5.ch2.decoupled.MessageRenderer;
+import com.spring5.ch2.decoupled.MessageSupportFactory;
+
+public class HelloWorld {
+
+	public static void main(String[] args) throws IOException {
+
+		
+
+		MessageRenderer mr = MessageSupportFactory.getInstance().getMessageRenderer();
+		MessageProvider mp = MessageSupportFactory.getInstance().getMessageProvider();
+		mr.setMessageProvider(mp);
+		mr.render();
+
+	}
+
+}
